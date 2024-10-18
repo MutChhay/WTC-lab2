@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Drawing App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        canvas {
+            border: 2px solid #000;
+            cursor: crosshair;
+        }
+        #clearBtn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #clearBtn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mut Chhay</h1>
+    <h3>Basic Drawing App</h3>
+    <canvas id="drawingCanvas" width="600" height="400"></canvas>
+    <br>
+    <button id="clearBtn">Clear Canvas</button>
+
+    <script>
+        // Get the canvas and its context
+        const canvas = document.getElementById('drawingCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Variables to track mouse status and position
+        let drawing = false;
+
+        // Start drawing when the mouse is pressed down
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mousemove', draw);
+
+        // Clear the canvas when the button is clicked
+        document.getElementById('clearBtn').addEventListener('click', clearCanvas);
+
+        function startDrawing(event) {
+            drawing = true;
+            draw(event); // Draw the first point
+        }
+
+        function stopDrawing() {
+            drawing = false;
+            ctx.beginPath(); // Resets the path to avoid continuous drawing
+        }
+
+        function draw(event) {
+            if (!drawing) return;
+
+            // Set the drawing properties
+            ctx.lineWidth = 5;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = '#000000';
+
+            // Get the mouse position relative to the canvas
+            const rect = canvas.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            // Draw a line to the current mouse position
+            ctx.lineTo(x, y);
+            ctx.stroke();
+
+            // Start a new path for the next line segment
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    </script>
+
+</body>
+</html>
+

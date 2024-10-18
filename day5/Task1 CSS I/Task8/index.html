@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors and Backgrounds in CSS</title>
+    <style>
+        /* Applying different color formats */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333; /* Hex color */
+            background-color: rgb(245, 245, 245); /* RGB color */
+        }
+
+        h1 {
+            color: hsl(240, 100%, 50%); /* HSL color (bright blue) */
+            text-align: center;
+        }
+
+        p.hex-color {
+            color: #FF5733; /* Hex color (vivid orange) */
+        }
+
+        p.rgb-color {
+            color: rgb(34, 139, 34); /* RGB color (forest green) */
+        }
+
+        p.hsl-color {
+            color: hsl(120, 60%, 50%); /* HSL color (mid-green) */
+        }
+
+        /* Applying background properties */
+        .solid-bg {
+            background-color: lightblue; /* Solid color background */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .image-bg {
+            background-image: url('./7c12f648075de46628d571a4e1382456.jpg'); /* Image background */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Colors and Backgrounds in CSS</h1>
+
+    <h2>Text Color Examples</h2>
+    <p class="hex-color">This paragraph uses a hex color: #FF5733 (Vivid Orange).</p>
+    <p class="rgb-color">This paragraph uses an RGB color: rgb(34, 139, 34) (Forest Green).</p>
+    <p class="hsl-color">This paragraph uses an HSL color: hsl(120, 60%, 50%) (Mid-Green).</p>
+
+    <h2>Background Examples</h2>
+    <div class="solid-bg">This div has a solid light blue background.</div>
+
+    <div class="gradient-bg">This div has a linear gradient background from orange to pink.</div>
+
+    <div class="image-bg">This div has a background image.</div>
+
+</body>
+</html>

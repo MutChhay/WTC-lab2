@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline Caching with Service Worker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My Offline Page</h1>
+    <p>This page is cached using a service worker. It will be available offline once you've visited it.</p>
+
+    <script>
+        // Register the service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                }, function(error) {
+                    console.log('Service Worker registration failed:', error);
+                });
+            });
+        }
+    </script>
+    <script>index.js</script>
+
+</body>
+</html>

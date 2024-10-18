@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables vs. Div Layout</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* Table Styling */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f8b400;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Div Layout Styling */
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .box {
+            width: 30%;
+            padding: 20px;
+            border: 2px solid #ccc;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+
+        .box h2 {
+            color: #f8b400;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tables vs. Div Elements for Layout</h1>
+
+    <!-- Table Layout for Structured Data -->
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Apple</td>
+                <td>$1.00</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>$0.50</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Orange</td>
+                <td>$0.75</td>
+                <td>75</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Div Layout for Page Structure -->
+    <div class="container">
+        <div class="box">
+            <h2>Section 1</h2>
+            <p>This is content for Section 1. You can style it with CSS as needed for your layout.</p>
+        </div>
+
+        <div class="box">
+            <h2>Section 2</h2>
+            <p>This is content for Section 2. Using flexbox, sections can align and resize dynamically.</p>
+        </div>
+
+        <div class="box">
+            <h2>Section 3</h2>
+            <p>This is content for Section 3. Flexbox allows responsive, flexible layouts.</p>
+        </div>
+    </div>
+
+</body>
+</html>

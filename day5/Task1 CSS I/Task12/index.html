@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flexbox Layout</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Flexbox container */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        /* Flex items */
+        .flex-item {
+            background-color: #f8b400;
+            color: white;
+            width: 30%;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            font-size: 1.2em;
+            border-radius: 10px;
+        }
+
+        /* Responsive layout adjustments */
+        @media (max-width: 800px) {
+            .flex-item {
+                width: 45%; /* Adjust item width on medium screens */
+            }
+        }
+
+        @media (max-width: 500px) {
+            .flex-item {
+                width: 100%; /* Stack items on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Responsive Flexbox Layout</h1>
+
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+        <div class="flex-item">Item 5</div>
+        <div class="flex-item">Item 6</div>
+    </div>
+
+</body>
+</html>

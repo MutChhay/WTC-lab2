@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Example</title>
+    <style>
+        /* Defining CSS variables in :root for global scope */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #f39c12;
+            --font-size: 16px;
+            --padding: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--primary-color);
+            color: white;
+            padding: var(--padding);
+            font-size: var(--font-size);
+        }
+
+        h1 {
+            color: var(--secondary-color);
+        }
+
+        .box {
+            background-color: white;
+            color: var(--primary-color);
+            padding: var(--padding);
+            border-radius: 10px;
+            margin: var(--padding);
+        }
+
+        /* Changing CSS variables locally for the .dark-theme class */
+        .dark-theme {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Using CSS Variables</h1>
+
+    <div class="box">
+        <p>This box is styled using CSS variables for color and spacing.</p>
+    </div>
+
+    <div class="box dark-theme">
+        <p>This box uses different values for the CSS variables within the ".dark-theme" class.</p>
+    </div>
+
+</body>
+</html>

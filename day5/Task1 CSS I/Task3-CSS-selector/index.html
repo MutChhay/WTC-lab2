@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Example</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <style>
+        /* Element Selector */
+        h1 {
+            color: navy; /* Styles all <h1> elements */
+        }
+
+        /* Class Selector */
+        .highlight {
+            background-color: yellow; /* Styles elements with class 'highlight' */
+        }
+
+        /* ID Selector */
+        #main {
+            font-size: 20px; /* Styles the element with ID 'main' */
+            padding: 10px;
+        }
+
+        /* Attribute Selector */
+        a[target="_blank"] {
+            color: green; /* Styles <a> elements with target attribute value '_blank' */
+        }
+
+        /* Pseudo-class */
+        p:hover {
+            color: red; /* Changes text color of <p> elements when hovered over */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Web Page [Mut Chhay]</h1>
+    <h1>CSS Selectors Example</h1>
+
+    <div id="main">
+        <p>This paragraph will change color when you hover over it.</p>
+        <p class="highlight">This paragraph has a highlighted background.</p>
+        <a href="https://www.example.com" target="_blank">Open Example Site</a>
+    </div>
+
+    <p>This is another paragraph without any specific styles.</p>
+</body>
+</html>

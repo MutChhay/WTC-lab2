@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Example</title>
+    <style>
+        /* General page styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Box 1: No padding, border, or margin */
+        .box1 {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+        }
+
+        /* Box 2: Padding added */
+        .box2 {
+            width: 200px;
+            height: 100px;
+            background-color: lightgreen;
+            padding: 20px;
+        }
+
+        /* Box 3: Border added */
+        .box3 {
+            width: 200px;
+            height: 100px;
+            background-color: lightcoral;
+            padding: 20px;
+            border: 5px solid darkred;
+        }
+
+        /* Box 4: Margin added */
+        .box4 {
+            width: 200px;
+            height: 100px;
+            background-color: lightyellow;
+            padding: 20px;
+            border: 5px solid goldenrod;
+            margin: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Box Model Example</h1>
+
+    <div class="container">
+        <!-- Box without padding, border, or margin -->
+        <div class="box1">Content</div>
+
+        <!-- Box with padding -->
+        <div class="box2">Content with Padding</div>
+
+        <!-- Box with padding and border -->
+        <div class="box3">Content with Border</div>
+
+        <!-- Box with padding, border, and margin -->
+        <div class="box4">Content with Margin</div>
+    </div>
+
+</body>
+</html>

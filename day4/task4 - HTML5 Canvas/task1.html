@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Shapes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mut Chhay</h1>
+    <h3>Drawing on Canvas</h3>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+
+    <script>
+        // Get the canvas element
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw a rectangle
+        ctx.fillStyle = '#4CAF50';  // Fill color for rectangle
+        ctx.fillRect(50, 50, 150, 100);  // x, y, width, height
+
+        // Draw a circle
+        ctx.beginPath();
+        ctx.arc(250, 200, 50, 0, 2 * Math.PI);  // x, y, radius, startAngle, endAngle
+        ctx.fillStyle = '#FF5733';  // Fill color for circle
+        ctx.fill();
+        ctx.closePath();
+
+        // Draw a line
+        ctx.beginPath();
+        ctx.moveTo(50, 300);  // Start point (x, y)
+        ctx.lineTo(350, 300);  // End point (x, y)
+        ctx.strokeStyle = '#0000FF';  // Line color
+        ctx.lineWidth = 4;  // Line width
+        ctx.stroke();  // Draw the line
+        ctx.closePath();
+    </script>
+
+</body>
+</html>

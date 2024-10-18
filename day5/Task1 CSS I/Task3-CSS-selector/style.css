@@ -1,0 +1,24 @@
+h1 {
+    color: navy; /* Styles all <h1> elements */
+}
+
+/* Class Selector */
+.highlight {
+    background-color: yellow; /* Styles elements with class 'highlight' */
+}
+
+/* ID Selector */
+#main {
+    font-size: 20px; /* Styles the element with ID 'main' */
+    padding: 10px;
+}
+
+/* Attribute Selector */
+a[target="_blank"] {
+    color: green; /* Styles <a> elements with target attribute value '_blank' */
+}
+
+/* Pseudo-class */
+p:hover {
+    color: red; /* Changes text color of <p> elements when hovered over */
+}

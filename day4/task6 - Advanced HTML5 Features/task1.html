@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Color Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            transition: background-color 0.5s ease;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .color-picker {
+            margin: 20px 0;
+        }
+        .color-button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            color: #fff;
+            border-radius: 5px;
+        }
+        #red { background-color: red; }
+        #blue { background-color: blue; }
+        #green { background-color: green; }
+        #yellow { background-color: yellow; color: #000; }
+        #reset { background-color: #333; color: #fff; }
+    </style>
+</head>
+<body>
+    <h1>MUT CHHAY</h1>
+    <h3>Select a Theme Color</h3>
+    
+    <div class="color-picker">
+        <button class="color-button" id="red">Red</button>
+        <button class="color-button" id="blue">Blue</button>
+        <button class="color-button" id="green">Green</button>
+        <button class="color-button" id="yellow">Yellow</button>
+        <button class="color-button" id="reset">Reset Theme</button>
+    </div>
+
+    <script>
+        // Function to set the background color
+        function setBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+            localStorage.setItem('bgColor', color); // Save the selected color in localStorage
+        }
+
+        // Load the saved background color when the page loads
+        window.onload = function() {
+            const savedColor = localStorage.getItem('bgColor');
+            if (savedColor) {
+                setBackgroundColor(savedColor);
+            }
+        }
+
+        // Event listeners for each color button
+        document.getElementById('red').addEventListener('click', function() {
+            setBackgroundColor('red');
+        });
+        document.getElementById('blue').addEventListener('click', function() {
+            setBackgroundColor('blue');
+        });
+        document.getElementById('green').addEventListener('click', function() {
+            setBackgroundColor('green');
+        });
+        document.getElementById('yellow').addEventListener('click', function() {
+            setBackgroundColor('yellow');
+        });
+
+        // Reset button to clear the theme
+        document.getElementById('reset').addEventListener('click', function() {
+            localStorage.removeItem('bgColor');
+            document.body.style.backgroundColor = ''; // Reset to default
+        });
+    </script>
+
+</body>
+</html>

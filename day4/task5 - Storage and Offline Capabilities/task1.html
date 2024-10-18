@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        canvas {
+            border: 2px solid #000;
+            display: block;
+            margin: 0 auto;
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h1>MUT CHHAY</h1>
+    <h3>Bouncing Ball Game</h3>
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Ball properties
+        const ball = {
+            x: 50, // initial x position
+            y: 50, // initial y position
+            radius: 15,
+            dx: 2, // change in x (speed)
+            dy: 2, // change in y (speed)
+            color: getRandomColor() // random initial color
+        };
+
+        // Function to get a random color
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Draw the ball on the canvas
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+            ctx.fillStyle = ball.color;
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        // Update the canvas
+        function update() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // clear the canvas
+
+            drawBall(); // draw the ball
+
+            // Bounce the ball off the edges
+            if (ball.x + ball.radius > canvas.width || ball.x - ball.radius < 0) {
+                ball.dx = -ball.dx; // reverse direction
+                ball.color = getRandomColor(); // change color
+            }
+            if (ball.y + ball.radius > canvas.height || ball.y - ball.radius < 0) {
+                ball.dy = -ball.dy; // reverse direction
+                ball.color = getRandomColor(); // change color
+            }
+
+            // Update ball position
+            ball.x += ball.dx;
+            ball.y += ball.dy;
+
+            requestAnimationFrame(update); // call update again
+        }
+
+        // Start the game
+        update();
+
+    </script>
+
+</body>
+</html>
