@@ -1,0 +1,27 @@
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.card__image {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  -o-object-fit: cover;
+     object-fit: cover; /* Optional: Scale image to fill container */
+}
+.card__title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.card__description {
+  line-height: 1.5;
+}
+.card__button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}/*# sourceMappingURL=style2.css.map */

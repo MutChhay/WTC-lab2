@@ -30,3 +30,40 @@ body {
     background-color: #f39c12;
   }
   
+
+
+  /* scss code*/
+
+  /* $primary-color: #007bff;
+$text-color: #333;
+$margin-bottom: 1rem;
+
+.heading {
+  font-size: 2rem;
+  color: $text-color;
+  margin-bottom: $margin-bottom * 1.5;
+}
+
+.list-item {
+  margin-bottom: $margin-bottom / 2;
+}
+
+.link {
+  color: $primary-color;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+
+  @mixin hover {
+    background-color: #eee;
+  }
+
+  &:hover {
+    @include hover;
+  }
+}
+
+.link--new-tab {
+  @extend .link; /* Reuse styles from .link
+} */

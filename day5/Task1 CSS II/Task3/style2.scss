@@ -1,0 +1,35 @@
+// Define variables for colors
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+// Create a reusable mixin for buttons
+@mixin button {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+// Header section styles
+header {
+  background-color: $secondary-color;
+  text-align: center;
+  padding: 20px;
+
+  h1 {
+    color: white;
+  }
+}
+
+// Navigation section styles
+nav {
+  @include button; // Use the button mixin
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+
+// Section and footer styles (using imports)
+@import "sections";  // Import styles from a separate file
+@import "footer";

@@ -3,11 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple CSS Example</title>
-    <link rel="stylesheet" href="Task1.css">
+    <title>CSS Alignment Techniques</title>
+    <style>
+        /* Block element alignment */
+        .block-example {
+            background-color: lightblue;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Inline element alignment */
+        .inline-example span {
+            display: inline;
+            padding: 10px;
+            background-color: lightcoral;
+        }
+
+        /* Inline-block element alignment */
+        .inline-block-example span {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            line-height: 100px; /* Centers text vertically */
+            background-color: lightgreen;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* Flexbox alignment */
+        .flex-container {
+            display: flex;
+            justify-content: space-around; /* Aligns items horizontally */
+            align-items: center; /* Aligns items vertically */
+            height: 200px;
+            background-color: lightgoldenrodyellow;
+        }
+
+        .flex-item {
+            background-color: lightseagreen;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        /* Text alignment */
+        .text-align-example {
+            background-color: lightpink;
+            text-align: right;
+            padding: 10px;
+        }
+
+        /* Vertical alignment */
+        .vertical-align-container {
+            height: 150px;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center; /* Centers vertically */
+            justify-content: center; /* Centers horizontally */
+            background-color: lightgray;
+        }
+
+        .vertical-align-item {
+            background-color: lightsalmon;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Web Page</h1>
-    <p>This is a simple demonstration of CSS.</p>
+    <h1 style="text-align: center;">CSS Alignment Techniques</h1>
+
+    <!-- Block Element Alignment -->
+    <div class="block-example">
+        <h2>This is a block-level element with centered text</h2>
+    </div>
+
+    <!-- Inline Element Alignment -->
+    <div class="inline-example">
+        <h3>Inline Elements Example:</h3>
+        <span>Item 1</span>
+        <span>Item 2</span>
+        <span>Item 3</span>
+    </div>
+
+    <!-- Inline-Block Element Alignment -->
+    <div class="inline-block-example">
+        <h3>Inline-Block Elements Example:</h3>
+        <span>Box 1</span>
+        <span>Box 2</span>
+        <span>Box 3</span>
+    </div>
+
+    <!-- Flexbox Alignment -->
+    <div class="flex-container">
+        <div class="flex-item">Flex Item 1</div>
+        <div class="flex-item">Flex Item 2</div>
+        <div class="flex-item">Flex Item 3</div>
+    </div>
+
+    <!-- Text Alignment Example -->
+    <div class="text-align-example">
+        <p>This text is aligned to the right using the <code>text-align</code> property.</p>
+    </div>
+
+    <!-- Vertical Alignment Example -->
+    <div class="vertical-align-container">
+        <div class="vertical-align-item">
+            Vertically and Horizontally Centered
+        </div>
+    </div>
 </body>
 </html>

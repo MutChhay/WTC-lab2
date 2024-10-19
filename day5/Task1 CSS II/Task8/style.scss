@@ -1,0 +1,37 @@
+// Variables for light theme
+$light-bg: #ffffff;
+$light-text: #000000;
+
+// Variables for dark theme
+$dark-bg: #000000;
+$dark-text: #ffffff;
+
+// Base styles
+body {
+    background-color: $light-bg;
+    color: $light-text;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+// Light theme
+.light-theme {
+    background-color: $light-bg;
+    color: $light-text;
+}
+
+// Dark theme
+.dark-theme {
+    background-color: $dark-bg;
+    color: $dark-text;
+}
+
+// Additional item styling
+.container {
+    padding: 20px;
+}
+
+.item {
+    padding: 10px;
+    border: 1px solid gray;
+    margin: 5px 0;
+}

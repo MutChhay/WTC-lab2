@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alignment Example</title>
+    <style>
+        .container {
+            width: 400px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .vertical-top {
+            vertical-align: top;
+        }
+
+        .vertical-middle {
+            vertical-align: middle;
+        }
+
+        .vertical-bottom {
+            vertical-align: bottom;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .flex-item {
+            flex: 1;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        This text is centered.
+    </div>
+
+    <div class="container text-right">
+        This text is aligned to the right.
+    </div>
+
+    <div class="container">
+        <span class="vertical-top">Top</span>
+        <span class="vertical-middle">Middle</span>
+        <span class="vertical-bottom">Bottom</span>
+    </div>
+
+    <div class="container flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+</body>
+</html>

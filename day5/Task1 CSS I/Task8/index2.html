@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color and Background Example</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 300px;
+            margin: 20px auto;
+        }
+
+        .solid-color {
+            background-color: #FF0000; /* Red */
+        }
+
+        .rgb-color {
+            background-color: rgb(0, 255, 0); /* Green */
+        }
+
+        .hsl-color {
+            background-color: hsl(240, 100%, 50%); /* Blue */
+        }
+
+        .gradient {
+            background-image: linear-gradient(to right, #FF0000, #FFFF00);
+        }
+
+        .image-background {
+            background-image: url("path/to/your/image.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to my home page [ Mut Chhay ] </h1>
+    <div class="container solid-color">Solid Color</div>
+    <div class="container rgb-color">RGB Color</div>
+    <div class="container hsl-color">HSL Color</div>
+    <div class="container gradient">Gradient</div>
+    <div class="container image-background">Image Background</div>
+</body>
+</html>

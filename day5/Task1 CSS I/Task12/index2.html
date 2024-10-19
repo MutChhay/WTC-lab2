@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Layout Example</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+
+        .nav-item {
+            padding: 10px;
+        }
+
+        .content {
+            width: 80%;
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <nav class="nav">
+            <div class="nav-item">Home</div>
+            <div class="nav-item">About</div>
+            <div class="nav-item">Contact</div>
+        </nav>
+        <div class="content">Main Content</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

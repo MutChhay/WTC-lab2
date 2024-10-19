@@ -1,0 +1,27 @@
+/* Grid system for all screens */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Responsive columns */
+    gap: 20px;
+  }
+  
+  .grid-item {
+    background-color: #eee;
+    padding: 20px;
+  }
+  
+  /* Media Queries for Breakpoints */
+  
+  @media screen and (max-width: 768px) {
+    /* Adjust grid layout for smaller screens (e.g., tablets) */
+    .grid-container {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* Adjust grid layout for extra small screens (e.g., smartphones) */
+    .grid-container {
+      grid-template-columns: 1fr;  /* Single column layout */
+    }
+  }

@@ -1,0 +1,15 @@
+#title {
+    font-size: 36px;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+a[href="https://example.com"] {
+    color: green;
+}
+
+button:hover {
+    background-color: lightblue;
+}

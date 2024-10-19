@@ -1,0 +1,42 @@
+// Define variables for theme colors
+$light-background: #fff;
+$light-text: #000;
+$dark-background: #222;
+$dark-text: #fff;
+
+// Base styles (apply to both themes)
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.container {
+  background-color: $light-background; /* Use variables for background color */
+  color: $light-text; /* Use variables for text color */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.item {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+// Light theme styles (default)
+#theme-toggle.light {
+  @extend .light-theme; /* Apply light theme styles conditionally */
+}
+
+// Dark theme styles
+.dark-theme {
+  background-color: $dark-background;
+  color: $dark-text;
+
+  .item {
+    border-color: #444;
+  }
+}
+
+// (Optional) Add JavaScript to handle theme toggle button click
+// and update the class name (e.g., toggle .light vs. .dark)

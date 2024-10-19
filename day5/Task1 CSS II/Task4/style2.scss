@@ -1,0 +1,17 @@
+.base-button {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .primary-button {
+    @extend .base-button;  // Inherit styles from .base-button
+    background-color: #ff0000;  // Override background color
+  }
+  
+  .secondary-button {
+    @extend .base-button;  // Inherit styles from .base-button
+    background-color: #00ff00;  // Override background color
+  }

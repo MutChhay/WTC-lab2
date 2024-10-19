@@ -1,0 +1,25 @@
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-theme {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.container {
+  padding: 20px;
+}
+
+.item {
+  padding: 10px;
+  border: 1px solid gray;
+  margin: 5px 0;
+}/*# sourceMappingURL=style.css.map */

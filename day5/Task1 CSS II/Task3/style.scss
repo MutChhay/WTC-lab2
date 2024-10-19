@@ -1,0 +1,32 @@
+// Variables
+$primary-color: #3498db;
+$text-color: #333;
+$footer-bg: #2c3e50;
+
+// Partials (In _header.scss)
+@import 'header'; // Importing the header partial
+
+// Nesting
+section {
+  background-color: lighten($primary-color, 40%);
+  
+  p {
+    color: $text-color;
+  }
+
+  a {
+    color: $primary-color;
+    
+    &:hover {
+      color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Footer styling
+footer {
+  background-color: $footer-bg;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}

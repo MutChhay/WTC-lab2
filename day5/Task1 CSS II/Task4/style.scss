@@ -1,0 +1,38 @@
+// Declaring Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: 'Helvetica', sans-serif;
+$padding-size: 10px;
+
+// Function to Darken a Color
+@function darken-color($color, $percentage) {
+  @return darken($color, $percentage);
+}
+
+// Base Button Style
+.button {
+  padding: $padding-size;
+  font-family: $font-stack;
+  border-radius: 5px;
+  color: white;
+}
+
+// Primary Button Inheriting Base Styles
+.primary-button {
+  @extend .button;
+  background-color: $primary-color;
+
+  &:hover {
+    background-color: darken-color($primary-color, 10%);
+  }
+}
+
+// Secondary Button Inheriting Base Styles
+.secondary-button {
+  @extend .button;
+  background-color: $secondary-color;
+
+  &:hover {
+    background-color: darken-color($secondary-color, 10%);
+  }
+}

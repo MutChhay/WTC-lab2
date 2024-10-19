@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Layout Example</title>
+    <style>
+        .table-layout {
+            border-collapse: collapse;
+        }
+
+        .table-layout td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .div-layout {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .div-layout div {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Table Layout</h2>
+    <table class="table-layout">
+        <tr>
+            <td>Column 1</td>
+            <td>Column 2</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+        </tr>
+    </table>
+
+    <h2>Div Layout</h2>
+    <div class="div-layout">
+        <div>Div 1</div>
+        <div>Div 2</div>
+    </div>
+</body>
+</html>

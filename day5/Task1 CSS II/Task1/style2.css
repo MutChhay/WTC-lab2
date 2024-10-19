@@ -1,0 +1,33 @@
+.heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .list-item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .link {
+    color: #007bff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  .link:hover {
+    background-color: #eee;
+  }
+  
+  .link--new-tab {
+    color: #007bff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  .link--new-tab:hover {
+    background-color: #eee;
+  }

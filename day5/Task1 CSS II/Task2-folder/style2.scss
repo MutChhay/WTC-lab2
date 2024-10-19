@@ -1,0 +1,9 @@
+$primary-color: #007bff; // Define a variable
+
+.button {
+  background-color: $primary-color; // Use the variable
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,20 @@
+.button, .secondary-button, .primary-button {
+  padding: 10px;
+  font-family: "Helvetica", sans-serif;
+  border-radius: 5px;
+  color: white;
+}
+
+.primary-button {
+  background-color: #3498db;
+}
+.primary-button:hover {
+  background-color: #217dbb;
+}
+
+.secondary-button {
+  background-color: #2ecc71;
+}
+.secondary-button:hover {
+  background-color: #25a25a;
+}/*# sourceMappingURL=style.css.map */
